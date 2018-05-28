@@ -73,3 +73,4 @@ if __name__ == '__main__':
     train_labels, train_texts = read_files('train')
     test_labels, test_texts = read_files('test')
     x_train, x_test = text_to_vec(train_texts, test_texts)
+    print('test for push github')
