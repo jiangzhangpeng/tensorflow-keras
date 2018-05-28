@@ -68,10 +68,8 @@ def text_to_vec(train_texts, test_texts):
     return x_train, x_test
 
 
-
-
 if __name__ == '__main__':
     download_data()
     train_labels, train_texts = read_files('train')
     test_labels, test_texts = read_files('test')
-    tokens = create_token(texts)
+    x_train, x_test = text_to_vec(train_texts, test_texts)
