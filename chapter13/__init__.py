@@ -57,7 +57,7 @@ def read_files(filetype):
     return all_labels, all_texts
 
 
-# 建立token
+# 建立token test for commit
 def text_to_vec(train_texts, test_texts):
     token = Tokenizer(num_words=2000)
     token.fit_on_texts(train_texts)
@@ -66,6 +66,8 @@ def text_to_vec(train_texts, test_texts):
     x_train = sequence.pad_sequences(train_seq, maxlen=100)
     x_test = sequence.pad_sequences(test_seq, maxlen=100)
     return x_train, x_test
+
+
 
 
 if __name__ == '__main__':
