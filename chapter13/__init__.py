@@ -59,12 +59,15 @@ def read_files(filetype):
 
 # 建立token test for commit
 def text_to_vec(train_texts, test_texts):
-    token = Tokenizer(num_words=2000)
+    #token = Tokenizer(num_words=2000)
+    token = Tokenizer(num_words=3800)
     token.fit_on_texts(train_texts)
     train_seq = token.texts_to_sequences(train_texts)
     test_seq = token.texts_to_sequences(test_texts)
-    x_train = sequence.pad_sequences(train_seq, maxlen=100)
-    x_test = sequence.pad_sequences(test_seq, maxlen=100)
+    #x_train = sequence.pad_sequences(train_seq, maxlen=100)
+    #x_test = sequence.pad_sequences(test_seq, maxlen=100)
+    x_train = sequence.pad_sequences(train_seq, maxlen=380)
+    x_test = sequence.pad_sequences(test_seq, maxlen=380)
     return x_train, x_test
 
 
